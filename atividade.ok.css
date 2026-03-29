@@ -1,0 +1,206 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.font-amatic {
+    font-family: 'Amatic SC', cursive;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navegação */
+.navbar-nav .nav-link {
+    position: relative;
+    color: #7f7f90;
+    transition: 0.3s;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ce1212;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #000 !important;
+}
+
+.bg-yummy {
+    background-color: #ce1212;
+}
+
+/* Botão play do video */
+
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+.video-container img {
+  width: 100%;
+  display: block;
+}
+
+/* BOTÃO */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: #ce1212;
+  border-radius: 50%;
+  display: block;
+}
+
+/* TRIÂNGULO (play) */
+.play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40%, -50%);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid white;
+}
+
+/* ANIMAÇÃO PULSANTE */
+.play-btn::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 5px solid #ce1212;
+  animation: pulse 2s infinite;
+}
+
+/* KEYFRAMES  */
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* Circulos */
+.text-yummy1 {
+    color: #ffffff !important;
+    background-color: #fc54547a !important;
+}
+
+.text-yummy1 {
+    color: #ffffff !important;
+}
+
+.text-yummy {
+    color: #ce1212 !important;
+}
+
+.bg-yummy {
+    background-color: #ce1212 !important;
+}
+
+.bg-yummy-light {
+    background-color: #f3d8d8 !important;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.icon-box:hover .icon-circle {
+    background-color: #ce1212 !important;
+    color: #fff !important;
+}
+
+.icon-box:hover .icon-circle i {
+    color: #fff !important;
+
+}
+
+/* Comidas */
+.nav-link-custom {
+    border-bottom: 2px solid #ccc !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    border-bottom: 2px solid red !important;
+    color: red !important;
+}
+
+.nav-link-custom.active {
+    border-bottom: 3px solid red !important;
+    color: red;
+}
+
+/* Bolinhas padrão (mais claras) */
+.carousel-indicators button {
+    background-color: #bdbcbc !important; /* vermelho claro */
+    opacity: 1;
+}
+
+/* Bolinha ativa (mais escura) */
+.carousel-indicators .active {
+    background-color: #ce1212 !important; /* vermelho principal */
+}
+
+/* Eventos */
+
+.card-event {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+}
+
+.img-event {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.card-event:hover .img-event {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
